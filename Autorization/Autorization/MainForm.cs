@@ -30,11 +30,10 @@ namespace Autorization
             lblInspection.BackColor = Color.Transparent;
             lblInspection.ForeColor = Color.Blue;
             lblInspection.Text = "Идет проверка";
-            //int x = (prgLoad.Size.Width - lblPrg.Size.Width) / 2;
-            //lblPrg.Location.X.CompareTo(x);// = prgLoad.Size.Width - lblPrg.Size.Width;
             lblInspection.Visible = true;
             prgLoad.Visible = true;
             prgLoad.Value = 0;
+            #region CheckLoginAndPassword
             //for(int i = 0; i < prgLoad.Maximum; i++)
             //{
             //    prgLoad.PerformStep();
@@ -45,6 +44,7 @@ namespace Autorization
             //        lblInspection.BackColor = Color.FromArgb(6, 176, 37);
             //    }
             //}
+            #endregion
             int countError = 0;
             if(CheckError.CheckErrors(tbLogin))
             {
@@ -62,7 +62,6 @@ namespace Autorization
             else
             {
                 this.Visible = false;
-                //lblInspection.Text = "Вход выполнен";
                 ApplicationForm frm = new ApplicationForm();
                 frm.ShowDialog();
             }
