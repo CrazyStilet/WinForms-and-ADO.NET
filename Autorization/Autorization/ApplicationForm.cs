@@ -15,6 +15,7 @@ namespace Autorization
         public ApplicationForm()
         {
             InitializeComponent();
+            //WorkingWithDB.SqlConn(tbInfo);
         }
 
         private void ApplicationForm_FormClosed(object sender, FormClosedEventArgs e)

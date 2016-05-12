@@ -16,7 +16,7 @@ namespace Autorization
             // Проверка полей на заполненность
             if(tb.Text == "" || tb.Text == "Имя пользователя" || tb.Text == "Пароль")
             {
-                tb.BackColor = Color.LightCoral;
+                ChangeBackColor(tb);
                 return true;
             }
             #region Проверка длинны пароля
@@ -24,7 +24,7 @@ namespace Autorization
             {
                 if(tb.TextLength < 6)
                 {
-                    tb.BackColor = Color.LightCoral;
+                    ChangeBackColor(tb);
                     return true;
                 }
             }
@@ -45,7 +45,7 @@ namespace Autorization
                     {
                         if(tb.Text.Length <= i + 2)
                         {
-                            tb.BackColor = Color.LightCoral;
+                            ChangeBackColor(tb);
                             return true;
                         }
                         count++;
@@ -54,7 +54,7 @@ namespace Autorization
                 }
                 if(count != 2)
                 {
-                    tb.BackColor = Color.LightCoral;
+                    ChangeBackColor(tb);
                     return true;
                 }
             }
@@ -71,6 +71,11 @@ namespace Autorization
                 return true;
             }
             return false;
+        }
+
+        public static void ChangeBackColor(TextBox tb)
+        {
+            tb.BackColor = Color.LightCoral;
         }
     }
 }

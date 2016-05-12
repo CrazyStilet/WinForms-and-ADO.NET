@@ -26,7 +26,8 @@ namespace Autorization
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            lblErrorData.Visible = false;
+            lblError.Visible = false;
+            lblError.Text = "";
             lblInspection.BackColor = Color.Transparent;
             lblInspection.ForeColor = Color.Blue;
             lblInspection.Text = "Идет проверка";
@@ -45,19 +46,11 @@ namespace Autorization
             //    }
             //}
             #endregion
-            int countError = 0;
-            if(CheckError.CheckErrors(tbLogin))
-            {
-                countError++;
-            }
-            if(CheckError.CheckErrors(tbPassword))
-            {
-                countError++;
-            }
-            if(countError!=0)
+            if(WorkingWithDB.CheckLogin(tbLogin,tbPassword,lblError) < 0)
             {
                 lblInspection.Visible = false;
-                lblErrorData.Visible = true;
+                lblError.Visible = true;
+                lblError.Left = (prgLoad.Size.Width - lblError.Width) / 2;
             }
             else
             {

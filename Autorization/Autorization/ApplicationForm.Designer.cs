@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbInfo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,13 +56,13 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Ваши данные:";
             // 
-            // textBox1
+            // tbInfo
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 97);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 186);
-            this.textBox1.TabIndex = 2;
+            this.tbInfo.Location = new System.Drawing.Point(16, 97);
+            this.tbInfo.Multiline = true;
+            this.tbInfo.Name = "tbInfo";
+            this.tbInfo.Size = new System.Drawing.Size(206, 186);
+            this.tbInfo.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -80,7 +80,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 295);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ApplicationForm";
@@ -96,7 +96,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

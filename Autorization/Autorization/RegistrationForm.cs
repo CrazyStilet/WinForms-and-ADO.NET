@@ -61,26 +61,31 @@ namespace Autorization
         private void btnOK_Click(object sender, EventArgs e)
         {
             int countError = 0;
-            if(CheckError.CheckErrors(tbLogin))
+            //if(CheckError.CheckErrors(tbLogin))
+            //{
+            //    countError++;
+            //}
+            //if(CheckError.CheckErrors(tbPassword))
+            //{
+            //    countError++;
+            //}
+            //if(CheckError.CheckErrors(tbRepeatPassword))
+            //{
+            //    countError++;
+            //}
+            //if(CheckError.CheckErrors(tbEmail))
+            //{
+            //    countError++;
+            //}
+            //if(CheckError.CheckErrors(tbPassword,tbRepeatPassword))
+            //{
+            //    countError++;
+            //}
+            if(WorkingWithDB.Registration(tbLogin, tbEmail) == 0)
             {
-                countError++;
+                MessageBox.Show("OK");
             }
-            if(CheckError.CheckErrors(tbPassword))
-            {
-                countError++;
-            }
-            if(CheckError.CheckErrors(tbRepeatPassword))
-            {
-                countError++;
-            }
-            if(CheckError.CheckErrors(tbEmail))
-            {
-                countError++;
-            }
-            if(CheckError.CheckErrors(tbPassword,tbRepeatPassword))
-            {
-                countError++;
-            }
+            
             if(countError==0)
             {
                 DialogResult = DialogResult.OK;

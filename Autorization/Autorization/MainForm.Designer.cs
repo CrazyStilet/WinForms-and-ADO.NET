@@ -41,7 +41,7 @@
             this.lblInspection = new System.Windows.Forms.Label();
             this.llbLostPassword = new System.Windows.Forms.LinkLabel();
             this.llbRegistration = new System.Windows.Forms.LinkLabel();
-            this.lblErrorData = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -135,7 +135,7 @@
             // prgLoad
             // 
             this.prgLoad.Location = new System.Drawing.Point(12, 200);
-            this.prgLoad.Maximum = 10;
+            this.prgLoad.Maximum = 5;
             this.prgLoad.Name = "prgLoad";
             this.prgLoad.Size = new System.Drawing.Size(446, 23);
             this.prgLoad.Step = 1;
@@ -179,25 +179,25 @@
             this.llbRegistration.Text = "Регистрация";
             this.llbRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbRegistration_LinkClicked);
             // 
-            // lblErrorData
+            // lblError
             // 
-            this.lblErrorData.AutoSize = true;
-            this.lblErrorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(176)))), ((int)(((byte)(37)))));
-            this.lblErrorData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblErrorData.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorData.Location = new System.Drawing.Point(137, 205);
-            this.lblErrorData.Name = "lblErrorData";
-            this.lblErrorData.Size = new System.Drawing.Size(188, 13);
-            this.lblErrorData.TabIndex = 11;
-            this.lblErrorData.Text = "Проверьте введенные данные";
-            this.lblErrorData.Visible = false;
+            this.lblError.AutoSize = true;
+            this.lblError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(176)))), ((int)(((byte)(37)))));
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(137, 205);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 11;
+            this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblError.Visible = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 258);
-            this.Controls.Add(this.lblErrorData);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.llbRegistration);
             this.Controls.Add(this.llbLostPassword);
             this.Controls.Add(this.lblInspection);
@@ -233,7 +233,7 @@
         private System.Windows.Forms.Label lblInspection;
         private System.Windows.Forms.LinkLabel llbLostPassword;
         private System.Windows.Forms.LinkLabel llbRegistration;
-        private System.Windows.Forms.Label lblErrorData;
+        private System.Windows.Forms.Label lblError;
     }
 }
 
